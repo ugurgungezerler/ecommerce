@@ -12,4 +12,9 @@ class Product extends Model
 
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
     protected $fillable = ['name', 'price', 'image', 'description'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
